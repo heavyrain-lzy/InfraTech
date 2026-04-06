@@ -14,6 +14,8 @@
 
 | 📜 文件名                                                                                                                         | 📖 知识分类     | 说明                                                                                                                  | 难度     |
 |:-------------------------------------------------------------------------------------------------------------------------------|:------------|:--------------------------------------------------------------------------------------------------------------------|:-------|
+| [MLA_diff_mode_mfu_calculation.ipynb](./deepseek_v3)                                                                           | Attention   | [超细图解MLA计算流&吸收矩阵对比分析](https://zhuanlan.zhihu.com/p/1948769945132470860)                                             | ⚡️⚡️⚡️ |
+| [rope_principle.ipynb](./models/modules/rope_principle.ipynb)                                                                  | Attention   | [彻底搞懂RoPE计算原理：从1D到3D](https://zhuanlan.zhihu.com/p/2023493768003724514)                                             | ⚡️⚡️⚡️ |
 | [collective_operations.ipynb](./deeplearning_framework)                                                                        | 分布式基础       | [分布式训练/推理基础：集合通信原理与实践](https://zhuanlan.zhihu.com/p/2006011081177457311)                                            | ️⚡️    |
 | [chunked_prefill_and_flash_decoding.ipynb](./llm_infer)                                                                        | 推理基础        | [ChunkedPrefill&FlashDecoding原理详解](https://zhuanlan.zhihu.com/p/1988996116017086993)                                | ⚡️⚡️   |
 | [attention_mla_flops_with_prefix_cache.ipynb](./llm_infer)                                                                     | 推理基础        | [prefix cache为何零开销](https://zhuanlan.zhihu.com/p/1896927732027335111)                                               | ⚡️⚡️   |
@@ -36,7 +38,7 @@
 | [LoRA_to_Multi_LoRA.ipynb](./multi_lora)                                                                                       | 训推基础        | [从LoRA到Multi-LoRA](https://zhuanlan.zhihu.com/p/1984729458444363168)                                                | ⚡️⚡️   |
 | [mini_dl_framework.ipynb](./deeplearning_framework)                                                                            | 训练框架        | [从零实现MLP训练全流程](https://zhuanlan.zhihu.com/p/1988895482320266895)                                                    | ⚡️⚡️   |
 | [pytorch_vista_deepseekV3.ipynb](./pytorch_vista)                                                                              | PyTorch     | [PyTorch结构可视化](https://zhuanlan.zhihu.com/p/1977414887736112704)                                                    | ⚡️     |
-| [MLA_diff_mode_mfu_calculation.ipynb](./deepseek_v3)                                                                           | Attention   | [超细图解MLA计算流&吸收矩阵对比分析](https://zhuanlan.zhihu.com/p/1948769945132470860)                                             | ⚡️⚡️⚡️ |
+| [torch_process_share_tensor.ipynb](./deeplearning_framework/torch_process_share_tensor.ipynb)                                  | PyTorch     | [PyTorch中基于CUDA IPC的进程间Tensor共享简介](https://zhuanlan.zhihu.com/p/2019510762004050171)                                | ⚡️     |
 
 ## 🤖 推理基础知识与框架
 
@@ -111,11 +113,13 @@
 | [Context Parallelism的原理与代码浅析](https://zhuanlan.zhihu.com/p/698447429)                                                 | 并行训练    | 🔥🔥🔥                                                                                         | 
 | [图解Infra视角下的强化学习性能问题(浅析)](https://zhuanlan.zhihu.com/p/1986888818738086656)                                           | RL训练    | 🔥                                                                                             |
 | [FP8计算在模型训练中的应用](https://zhuanlan.zhihu.com/p/26825649731)                                                            | 量化训练    | 🔥                                                                                             |
+| [PyTorch中基于CUDA IPC的进程间Tensor共享简介](https://zhuanlan.zhihu.com/p/2019510762004050171)                                  | 训练框架    | 🔥                                                                                             |
 
 ## 深度学习&大模型知识
 
 | 📚  文章                                                                                                             | 📖 知识分类     | 📜 备注                                                     |
 |:-------------------------------------------------------------------------------------------------------------------|:------------|:----------------------------------------------------------|
+| [彻底搞懂RoPE计算原理：从1D到3D](https://zhuanlan.zhihu.com/p/2023493768003724514)                                            | Attention   | [代码](./models/modules/rope_principle.ipynb)               |
 | [超细图解MLA计算流&吸收矩阵对比分析](https://zhuanlan.zhihu.com/p/1948769945132470860)                                            | Attention   | [高清图](./deepseek_v3)                                      |
 | [超细图解DSA计算流&性能对比与优化分析](https://zhuanlan.zhihu.com/p/1963371483985319543)                                           | Attention   | [高清图](./deepseek_v3)                                      |
 | [用注意力知识分析DSA(DeepSeek Sparse Attention)的设计逻辑](https://zhuanlan.zhihu.com/p/1962162900111172920)                    | Attention   | 🔥🔥                                                      |
@@ -128,6 +132,19 @@
 | [为什么transformer的FFN需要先升维再降维？](https://www.zhihu.com/question/665731716/answer/1965427268001183164)                 | Transformer | 🔥🔥                                                      |
 | [为什么线性注意力中K头数小于V头数？](https://www.zhihu.com/question/1978396956591141184/answer/1978404558473549228)                | Linear      | 🔥                                                        |
 | [AI模型优化的必修课：参数搜索/自动调优](https://zhuanlan.zhihu.com/p/1991878121566279093)                                           | 深度学习        | 🔥                                                        |
+
+## 主流大模型框架介绍
+
+| 模型卡片                                      | 架构关键词                              | 介绍                                        | 
+|:------------------------------------------|:-----------------------------------|:------------------------------------------|
+| [DeepSeek V3](./models/deepseek_v3)       | MLA+MoE                            | [link](./models/deepseek_v3/README.md)    | 
+| [Kimi K2](./models/kimi_k_2)              | MLA+MoE                            | [link](./models/kimi_k_2/README.md)       | 
+| [DeepSeek V3.2](./models/deepseek_v3_2)   | MLA+DSA                            | [link](./models/deepseek_v3_2/README.md)  | 
+| [Kimi K2.5](./models/kimi_k_2_5)          | MLA+MoE+MoonViT                    | [link](./models/kimi_k_2_5/README.md)     | 
+| [GLM 5](./models/glm_5)                   | MLA(DSA)+MoE                       | [link](./models/glm_5/README.md)          | 
+| [MiniMax M2.5](./models/minimax_m_2_5)    | GQA+MoE                            | [link](./models/minimax_m_2_5/README.md)  |
+| [Qwen3.5](./models/qwen3_5)               | Gated DeltaNet+Gated Attention+MoE | [link](./models/qwen3_5/README.md)        | 
+| [Step 3.5 Flash](./models/step_3_5_flash) | GQA+SWA+MoE+MTP                    | [link](./models/step_3_5_flash/README.md) | 
 
 ## GPU基础知识
 
