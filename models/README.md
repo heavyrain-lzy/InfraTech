@@ -2,7 +2,7 @@
 
 ## 🔍内容总览
 
-| 模型名称 | 架构关键词 | 参数规模（总/激活） | 上下文长度 | 发布时间 |
+| 模型名称 | 架构关键词 | 常见参数规模（总/激活） | 上下文长度 | 发布时间 |
 |:--|:--|:--|:--|:--|
 | [DeepSeek V3](./deepseek_v3) | MLA+MoE | 671B/37B | 128K | 2024年12月 |
 | [Kimi K2](./kimi_k_2) | MLA+MoE | 1T/32B | 128K | 2025年7月 |
@@ -11,6 +11,7 @@
 | [GLM 5](./glm_5) | MLA(DSA)+MoE | 744B/40B | 200K | 2026年2月 |
 | [MiniMax M2.5](./minimax_m_2_5) | GQA+MoE | 229B/10B | 200K | 2026年2月 |
 | [Qwen3.5](./qwen3_5) | Gated DeltaNet+Gated Attention+MoE | 397B/17B（MoE版） | 262K | 2026年2月 |
+| [Qwen3-VL](./qwen3_vl) | DeepStack+Interleaved-MRoPE | 32B；235B/22B | 256K | 2025年10月 |
 | [Step 3.5 Flash](./step_3_5_flash) | GQA+SWA+MoE+MTP | 196B/11B | 256K | 2026年2月 |
 
 ## 🖼️架构图索引
@@ -59,6 +60,16 @@
 
 <p style="text-align: center;">
   <img src="qwen3_5/qwen_3_5_27b_architecture.jpg" alt="Qwen3.5 27B架构图" />
+</p>
+
+- [Qwen3-VL模型卡片](./qwen3_vl)
+
+<p style="text-align: center;">
+  <img src="qwen3_vl/qwen_3_vl_32b_architecture.jpg" alt="Qwen3-VL 32B架构图" />
+</p>
+
+<p style="text-align: center;">
+  <img src="qwen3_vl/qwen_3_vl_235b_a22b_architecture.jpg" alt="Qwen3-VL 235B A22B架构图" />
 </p>
 
 - [Step 3.5 Flash模型卡片](./step_3_5_flash)
